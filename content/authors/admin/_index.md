@@ -66,4 +66,5 @@ email: ""
 # - Visitors
 ---
 
+
 # I am a coastal physical oceanographer specializing in submesoscale (0.1-10 km) processes with an interest in interdisciplinary research linking fluid dynamics to biogeochemistry in the coastal environment. I am also a big fan of turbulent and mixing processes in coastal zones. I use a hierarchy of ocean modeling tools, including ROMS (RANS), DIABLO (LES), DEDALUS (CFD solver in spectral methods), and GOTM (turbulence model), to combine with theories to explore coastal oceans. I received my Ph.D. in oceanography under the supervision of Prof. Robert Hetland at Texas A&M University and currently work with Prof. Leif Thomas as a postdoctoral research fellow at Stanford University.
