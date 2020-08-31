@@ -6,7 +6,6 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 hugo # if using a theme, replace by `hugo -t <yourtheme>`
 
 # Go To Public folder
-cd ..
 
 cd public
 
