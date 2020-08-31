@@ -14,8 +14,8 @@ role: PhD Student
 
 # Organizations/Affiliations
 organizations:
-- name: School of Atmospheric Sciences, Nanjing University
-  url: "https://as.nju.edu.cn/as_en/"
+- name: Nanjing University
+  url: "https://www.nju.edu.cn/en/main.psp"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -27,8 +27,6 @@ interests:
 
 education:
   courses:
-  # - course: PhD in Artificial Intelligence
-  #   institution: Stanford University
   - course: BSc in Atmospheric Sciences
     institution: Nanjing University
     year: 2020
@@ -40,7 +38,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:yjwang@smail.nju.edu.cn'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:yjwang@smail.nju.edu.cn'  
 # - icon: google-scholar
 #   icon_pack: ai
 #   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -65,6 +63,4 @@ email: ""
 # - Researchers
 # - Visitors
 ---
-
-
-# I am a coastal physical oceanographer specializing in submesoscale (0.1-10 km) processes with an interest in interdisciplinary research linking fluid dynamics to biogeochemistry in the coastal environment. I am also a big fan of turbulent and mixing processes in coastal zones. I use a hierarchy of ocean modeling tools, including ROMS (RANS), DIABLO (LES), DEDALUS (CFD solver in spectral methods), and GOTM (turbulence model), to combine with theories to explore coastal oceans. I received my Ph.D. in oceanography under the supervision of Prof. Robert Hetland at Texas A&M University and currently work with Prof. Leif Thomas as a postdoctoral research fellow at Stanford University.
+I am currently a doctoral student under the supervision of [Prof. Yanxu Zhang](https://as.nju.edu.cn/as_en/00/a6/c20738a327846/page.htm) at [School of Atmospheric Sciences, Nanjing University](https://as.nju.edu.cn/as_en/). I am generally interested in understanding how climate change and relevant policies would influence complex processes within Earth system, such as biogeochemical cycles of contaminants. I focus on how numerical models could help tackle these complications in geosciences. I received my bachelor's degree in June 2020 in Atmospheric Sciences from Nanjing University, where I joined the [Environmental Biogeochemistry Modeling Group](http://ebmg.online/)  and commenced modeling research to explore the impact of climate change on marine mercury (Hg) as my bachelor's thesis.

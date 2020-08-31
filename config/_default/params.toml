@@ -13,7 +13,7 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme = "Rose"
+theme = "minimal"
 
 # Enable users to switch between day and night mode?
 day_night = true
@@ -97,7 +97,7 @@ address = {street = "School of Atmospheric Sciences, Nanjing University", city =
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "32.1175", longitude = "118.9549"}
+coordinates = {latitude = "32.119873", longitude = "118.950066"}
 
 # Directions for visitors to locate you.
 directions = "Office A310"
