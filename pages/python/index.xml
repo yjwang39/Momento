@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Momento</title>
+    <link>https://yjwang39.github.io/momento/pages/python/</link>
+    <description>Recent content in Python on Momento</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2020 17:08:56 +0800</lastBuildDate><atom:link href="https://yjwang39.github.io/momento/pages/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test 1</title>
+      <link>https://yjwang39.github.io/momento/pages/python/test1/</link>
+      <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/pages/python/test1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ttttest</title>
+      <link>https://yjwang39.github.io/momento/pages/python/ttttest/</link>
+      <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/pages/python/ttttest/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
