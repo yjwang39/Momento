@@ -5,7 +5,8 @@
     <link>https://yjwang39.github.io/momento/fixed/</link>
     <description>Recent content in Fixeds on Momento</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://yjwang39.github.io/momento/fixed/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2020 17:34:39 +0800</lastBuildDate><atom:link href="https://yjwang39.github.io/momento/fixed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LaTeX</title>
       <link>https://yjwang39.github.io/momento/latex/</link>
@@ -14,6 +15,16 @@
       <guid>https://yjwang39.github.io/momento/latex/</guid>
       <description>Cheatsheets  List of symbols  Standard packages This is my default (more or less) :
 1 2 3 4 5 6 7 8 9 10 11 12 13  \usepackage{amsmath,amsfonts,amssymb,bm} \usepackage{graphicx} \usepackage{titlesec} \usepackage{fancyhdr} \usepackage{enumitem} \usepackage{hyperref} \usepackage{listings} \usepackage{fontspec} \usepackage{xcolor} \usepackage{soul} \usepackage{ulem} \usepackage{float} \usepackage{subfigure}   Misc Document class 1  \documentclass[12pt, a4paper]{report}    Classic classes: article, report, book. Default font size is 10pt. Other cool options: twocolumn, landscape.  Page size Custom page/margins:</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://yjwang39.github.io/momento/shell/</link>
+      <pubDate>Tue, 29 Sep 2020 17:34:39 +0800</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/shell/</guid>
+      <description>This page focuses on configuration of the terminal, useful commands and scripting.
+Command-line tools I used (e.g. git) are described in the Tools page.</description>
     </item>
     
     <item>

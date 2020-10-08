@@ -5,14 +5,13 @@
     <link>https://yjwang39.github.io/momento/post/</link>
     <description>Recent content in Posts on Momento</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://yjwang39.github.io/momento/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://yjwang39.github.io/momento/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example content</title>
-      <link>https://yjwang39.github.io/momento/2014/01/01/example-content/</link>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <link>https://yjwang39.github.io/momento/1/01/01/example-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yjwang39.github.io/momento/2014/01/01/example-content/</guid>
+      <guid>https://yjwang39.github.io/momento/1/01/01/example-content/</guid>
       <description>Howdy! This is an example blog post that shows several types of HTML content supported in this theme.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
  Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</description>
     </item>

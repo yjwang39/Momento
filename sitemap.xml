@@ -3,48 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yjwang39.github.io/momento/pages/shell/basicusage/</loc>
-    <lastmod>2020-01-28T00:34:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/shell/configuration/</loc>
-    <lastmod>2020-01-28T00:34:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/shell/installation/</loc>
-    <lastmod>2020-01-28T00:34:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/shell/quickstart/</loc>
-    <lastmod>2020-01-28T00:34:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/tools/git/</loc>
+    <loc>https://yjwang39.github.io/momento/git/</loc>
     <lastmod>2020-09-29T17:00:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/pages/python/test1/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/python/</loc>
-    <lastmod>2020-09-29T17:08:56+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/tools/zotero/</loc>
+    <loc>https://yjwang39.github.io/momento/zotero/</loc>
     <lastmod>2020-09-29T17:02:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/pages/python/ttttest/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+    <loc>https://yjwang39.github.io/momento/fixed/python/</loc>
   </url>
   
   <url>
@@ -52,16 +21,16 @@
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/markdown/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/pages/shell/</loc>
+    <loc>https://yjwang39.github.io/momento/shell/</loc>
     <lastmod>2020-09-29T17:34:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/pages/tools/</loc>
+    <loc>https://yjwang39.github.io/momento/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/fixed/tools/</loc>
     <lastmod>2020-09-29T16:55:39+08:00</lastmod>
   </url>
   
@@ -70,27 +39,21 @@
   </url>
   
   <url>
+    <loc>https://yjwang39.github.io/momento/fixed/</loc>
+    <lastmod>2020-09-29T17:34:39+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yjwang39.github.io/momento/</loc>
     <lastmod>2020-09-29T17:34:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/pages/</loc>
-    <lastmod>2020-09-29T17:34:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/2014/01/01/example-content/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
+    <loc>https://yjwang39.github.io/momento/1/01/01/example-content/</loc>
   </url>
   
   <url>
     <loc>https://yjwang39.github.io/momento/post/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/fixed/</loc>
   </url>
   
   <url>
