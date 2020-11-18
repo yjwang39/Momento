@@ -77,9 +77,160 @@
 
 <div class="page">
   <h1 class="page-title">Shell</h1>
+  <small><em class="page-description">Common configuration, useful command and so on...</em></small>
   <p>This page focuses on configuration of the terminal, useful commands and scripting.<br />
 Command-line tools I used (e.g. git) are described in the <a href="../tools/">Tools page</a>.</p>
+<h2 id="external-links">External links</h2>
+<ul>
+<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
+<li><a href="https://terminalsare.sexy/">Terminals Are Sexy</a></li>
+</ul>
+<h2 id="ssh-login">SSH login</h2>
+<p>I would like it simple when I have to log in remote servers using terminal shell:</p>
+<ul>
+<li><em>do not</em> have to remember all the various remote addresses and usernames.</li>
+<li>enable X11 forwarding and SSH agent forwarding, which allows running graphical applications remotely</li>
+<li><em>do not</em> have to enter various passwords for different servers.</li>
+</ul>
+<p>The solution is to edit <code>~/.ssh/config</code>(<em>user-specific configuration file</em>) or <code>/ect/ssh/ssh_config</code>(<em>global configuration file</em>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># for all ssh connection</span>
+Host *
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    XauthLocation /opt/X11/bin/xauth 
+    PubkeyAuthentication yes
+    AddKeysToAgent yes <span class="c1">#authentication</span>
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+<span class="c1"># example course server</span>
+Host course1
+  HostName course.example.com
+  User student
+  Port <span class="m">22</span>
+  IdentitiesOnly yes
 
+Host group
+  HostName group.nju.edu.cn
+  User me
+  Port <span class="m">22</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now I can log in the server by identifiers that I set, e.g. <code>ssh group</code>.</p>
+<h3 id="configuring-passwordless-authentication">Configuring Passwordless Authentication</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="../images/ssh_login.png" alt="How does this work?" title="SSH Authentication" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>How does this work?</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>First, make sure that you have <code>id_rsa</code> and <code>id_rsa.pub</code> public/private keypairs in the directory <code>~/.ssh/</code>, or you can generate <code>rsa</code> key by</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ssh-keygen -t rsa
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Second, copy the public key <code>id_rsa.pub</code> from ssh client to server <code>~/.ssh/authorized_keys</code>. Using <code>scp</code> command could be tedious, so we use <code>ssh-copy-id</code> command.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ssh-copy-id -i ~/.ssh/id_rsa.pub username@server -p <span class="m">22</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Then you are prompted to enter the password or complete other authentication for the server. Note that the private key should never be copied to another machine.</p>
+<ol start="3">
+<li>Change the permission of authorized key file to 600</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">chmod -f <span class="m">600</span> ~/.ssh/authorized_keys
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Then you can test the new key.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ssh -v username@server
+</code></pre></td></tr></table>
+</div>
+</div><p>The login should now complete without asking for a password. If the test fails, read the output to see what it says about whether the key is tried and what authentication methods the server is willing to accept.</p>
+<p>Note that the command might ask for the <strong>passphrase</strong> you specified for the keypairs. You can easily add/remove passphrase of your keypairs by using the following command</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ssh-keygen -p
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>On the first prompt, enter the file path (or press Enter to use the default)</li>
+<li>Second prompt, enter the old passphrase</li>
+<li>Next prompt, just press enter to unset the passphrase</li>
+</ol>
+<p><em>Note: I still failed and after googling around, I found trying the following could help.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">#Change the permision of user directory</span>
+chmod <span class="m">700</span> /home/username
+<span class="c1">#.Change the permision of .ssh directory</span>
+chmod <span class="m">700</span> ~/.ssh/
+</code></pre></td></tr></table>
+</div>
+</div>
 </div>
 
       </div>

@@ -5,15 +5,15 @@
     <language>en-us</language>
     <author>Yujuan Wang</author>
     <rights>(C) 2020</rights>
-    <updated>2020-09-29 17:34:39 &#43;0800 CST</updated>
+    <updated>2020-10-08 00:00:00 &#43;0000 UTC</updated>
 
     
       <item>
-        <title>Example content</title>
-        <link>https://yjwang39.github.io/momento/1/01/01/example-content/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+        <title>Example content -- from Hugo example sites</title>
+        <link>https://yjwang39.github.io/momento/2020/10/08/example-content-from-hugo-example-sites/</link>
+        <pubDate>Thu, 08 Oct 2020 00:00:00 UTC</pubDate>
         <author>Yujuan Wang</author>
-        <guid>https://yjwang39.github.io/momento/1/01/01/example-content/</guid>
+        <guid>https://yjwang39.github.io/momento/2020/10/08/example-content-from-hugo-example-sites/</guid>
         <description>&lt;div class=&#34;message&#34;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;

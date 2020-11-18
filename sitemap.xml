@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://yjwang39.github.io/momento/git/</loc>
-    <lastmod>2020-09-29T17:00:21+08:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yjwang39.github.io/momento/zotero/</loc>
-    <lastmod>2020-09-29T17:02:21+08:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,7 +22,7 @@
   
   <url>
     <loc>https://yjwang39.github.io/momento/shell/</loc>
-    <lastmod>2020-09-29T17:34:39+08:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -31,7 +31,7 @@
   
   <url>
     <loc>https://yjwang39.github.io/momento/fixed/tools/</loc>
-    <lastmod>2020-09-29T16:55:39+08:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,25 +39,48 @@
   </url>
   
   <url>
-    <loc>https://yjwang39.github.io/momento/fixed/</loc>
-    <lastmod>2020-09-29T17:34:39+08:00</lastmod>
+    <loc>https://yjwang39.github.io/momento/tags/blogging/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/categories/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/tags/example/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/2020/10/08/example-content-from-hugo-example-sites/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/categories/html/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yjwang39.github.io/momento/</loc>
-    <lastmod>2020-09-29T17:34:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yjwang39.github.io/momento/1/01/01/example-content/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yjwang39.github.io/momento/post/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yjwang39.github.io/momento/tags/</loc>
+    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yjwang39.github.io/momento/fixed/</loc>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
