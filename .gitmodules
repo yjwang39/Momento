@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/yjwang39/momento.git
-	branch = master
