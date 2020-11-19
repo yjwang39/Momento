@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Git &middot; Momento
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="../css/poole.css">
+  <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../favicon/android-icon-144x144.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../atom.xml">
+</head>
+
+
+  <body>
+
+  
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A place to gather useful information I keep on forgetting.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="../">Home</a>
+    <a class="sidebar-nav-item " href="../post">Posts</a>
+    <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/fixed/python/">Python</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/latex/">LaTeX</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/shell/">Shell</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/markdown/">Markdown</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/fixed/tools/">Tools</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/momento/about/">About</a>
+      
+    <a class="sidebar-nav-item" href="https://github.com/yjwang39/momento">GitHub project</a>
+    </nav>
+
+  <div class="sidebar-item">
+  </div>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020 Yujuan Wang. All rights reserved.</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../" title="Home">Momento</a>
+            <small>some quick reference</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="page">
+  <h1 class="page-title">Git</h1>
+  <small><em class="page-description">Some quick reference to Git.</em></small>
+  <p>Git can be useful when you build a version-control system to track changes in source code.</p>
+<ul>
+<li>Commit all modification and added files: <code>git commit -am &quot;informative message&quot;</code></li>
+<li>To show all the history of a file: <code>git log -p -- file</code></li>
+<li>To retrieve a specific version of a file: <code>git show COMMIT:file</code></li>
+<li>Revert repo to a specific commit: <code>git checkout COMMIT</code></li>
+<li>Undo a commit: <code>git reset HEAD~</code> and then for the real commit <code>git commit -c ORIG_HEAD</code>.</li>
+<li>Update sub-modules: <code>git submodule update --init --recursive</code></li>
+<li>Add all untracked files: <code>git st -s | grep '??' | cut -f2 -d ' ' | xargs git add</code></li>
+<li>Add remote e.g. after a fork: <code>git remote add mine git@github.com:jmonlong/REPO.git</code></li>
+</ul>
+<h3 id="aliases">Aliases</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global user.email <span class="s1">&#39;&lt;EMAIL&gt;&#39;</span>
+git config --global user.name <span class="s1">&#39;Yujuan Wang&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="branches">Branches</h4>
+<ul>
+<li>List branches: <code>git branch</code></li>
+<li>List all branches: <code>git branch -a</code></li>
+<li>Update remote branch list: <code>git remote prune origin</code></li>
+<li>Create branch: <code>git checkout -b hotfix</code></li>
+<li>Link it to a remote branch: <code>git branch -u origin/hotflix</code></li>
+<li>Creat a new local branch from remote: <code>git co -t origin/hotfix</code></li>
+<li>Merge the current branch with another branch: <code>git merge hotfix</code></li>
+<li>Delete a branch: <code>git branch -d hotfix</code></li>
+<li>Delete remote branch: <code>git push origin :hotfix</code></li>
+</ul>
+<h3 id="check-status-of-all-repos">Check status of all repos</h3>
+<p>I have an alias calling the following commands:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">WD</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+<span class="k">for</span> ff in <span class="sb">`</span>find . -maxdepth <span class="m">5</span> -name .git<span class="sb">`</span>
+<span class="k">do</span>
+    <span class="nv">GDIR</span><span class="o">=</span><span class="sb">`</span>dirname <span class="nv">$ff</span><span class="sb">`</span>
+    <span class="nb">echo</span> <span class="nv">$GDIR</span>
+    <span class="nb">cd</span> <span class="nv">$WD</span>/<span class="nv">$GDIR</span>
+    git st -s
+    git st <span class="p">|</span> grep ahead
+<span class="k">done</span>
+<span class="nb">cd</span> <span class="nv">$WD</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+

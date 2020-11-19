@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Momento</title>
+    <link>https://yjwang39.github.io/momento/fixed/tools/</link>
+    <description>Recent content in Tools on Momento</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yjwang39.github.io/momento/fixed/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>https://yjwang39.github.io/momento/git/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/git/</guid>
+      <description>Git can be useful when you build a version-control system to track changes in source code.
+ Commit all modification and added files: git commit -am &amp;quot;informative message&amp;quot; To show all the history of a file: git log -p -- file To retrieve a specific version of a file: git show COMMIT:file Revert repo to a specific commit: git checkout COMMIT Undo a commit: git reset HEAD~ and then for the real commit git commit -c ORIG_HEAD.</description>
+    </item>
+    
+    <item>
+      <title>Zotero</title>
+      <link>https://yjwang39.github.io/momento/zotero/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/zotero/</guid>
+      <description> Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
+— Zotero Website
+ </description>
+    </item>
+    
+  </channel>
+</rss>
