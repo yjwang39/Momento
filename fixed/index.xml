@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fixeds on Momento</title>
+    <link>https://yjwang39.github.io/momento/fixed/</link>
+    <description>Recent content in Fixeds on Momento</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yjwang39.github.io/momento/fixed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTeX</title>
+      <link>https://yjwang39.github.io/momento/latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/latex/</guid>
+      <description>Cheatsheets  List of symbols  Standard packages This is my default (more or less) :
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  \documentclass[a4paper,12pt]{report} \usepackage{amsmath,amsfonts,amssymb,bm} \usepackage{CTEX} \usepackage{graphicx} \usepackage{titlesec} \usepackage{fancyhdr} \usepackage{enumitem} \usepackage{hyperref} \usepackage{listings} \usepackage{fontspec} \usepackage{xcolor} \usepackage{soul} \usepackage{ulem} \usepackage{float} \usepackage{subfigure}   Misc Document class 1  \documentclass[12pt, a4paper]{report}    Classic classes: article, report, book. Default font size is 10pt. Other cool options: twocolumn, landscape.</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://yjwang39.github.io/momento/shell/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/shell/</guid>
+      <description>This page focuses on configuration of the terminal, useful commands and scripting.
+Command-line tools I used (e.g. git) are described in the Tools page.
+External links  The Art of Command Line Terminals Are Sexy  SSH login I would like it simple when I have to log in remote servers using terminal shell:
+ do not have to remember all the various remote addresses and usernames. enable X11 forwarding and SSH agent forwarding, which allows running graphical applications remotely do not have to enter various passwords for different servers.</description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://yjwang39.github.io/momento/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/markdown/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://yjwang39.github.io/momento/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/momento/about/</guid>
+      <description>Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!About this website Hey there! This is where I put all the useful information I keep on forgetting. Instead of googling the same things over and over, wasting time and server energy I put them here. This helps me capture and collect
+About me  Personal page with links.</description>
+    </item>
+    
+  </channel>
+</rss>
