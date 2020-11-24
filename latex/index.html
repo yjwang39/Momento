@@ -18,17 +18,17 @@
   <link rel="stylesheet" href="../css/syntax.css">
   <link rel="stylesheet" href="../css/lanyon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="./fa/css/font-awesome.min.css">
+
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../favicon/android-icon-144x144.png">
   <link rel="shortcut icon" href="../favicon.ico">
 
-  
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="../atom.xml">
 </head>
 
 
-  <body>
+  <body class="theme-base-0d">
 
   
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -101,6 +101,7 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\documentclass</span><span class="na">[a4paper,12pt]</span><span class="nb">{</span>report<span class="nb">}</span>
@@ -118,6 +119,7 @@
 <span class="k">\usepackage</span><span class="nb">{</span>ulem<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>float<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>cite<span class="nb">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="misc">Misc</h2>
@@ -167,11 +169,11 @@
 <pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
 <span class="k">\hypersetup</span><span class="nb">{</span>
-    colorlinks,
+    colorlinks,breaklinks,
     linkcolor=<span class="nb">{</span>red!70!black<span class="nb">}</span>,
     citecolor=<span class="nb">{</span>blue!40!black<span class="nb">}</span>,
     urlcolor=<span class="nb">{</span>magenta!80!black<span class="nb">}</span>
-<span class="nb">}</span>
+    <span class="nb">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="table-of-contents">Table of contents</h3>
@@ -186,16 +188,26 @@
 <pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="na">[pdfauthor={AUTHOR},pdftitle={TITLE},pdfsubject={SUBJECT},pdfkeywords={KEYWORDS},pdfproducer={LaTeX},pdfcreator={pdflatex}]</span><span class="nb">{</span>hyperref<span class="nb">}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="defining-your-own">Defining your own</h3>
+<h4 id="commands">Commands</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\yourcommand</span><span class="nb">}</span>[num]<span class="nb">{</span>what to do<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="environments">Environments</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\newenvironment</span><span class="nb">{</span><span class="k">\yourcommand</span><span class="nb">}</span>[num]<span class="nb">{</span>what to do<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id="figures">Figures</h2>
-<h3 id="position">Position</h3>
-<ul>
-<li><code>[h]</code> means <strong>h</strong>ere.</li>
-<li><code>[t]</code> means at the <strong>t</strong>op of the page.</li>
-<li><code>[p]</code> means on its own <strong>p</strong>age.</li>
-</ul>
-<p>I usually use <code>[ht]</code> for small/medium figures, and <code>[htp]</code> for large ones.</p>
-<h3 id="sub-figures">Sub-figures</h3>
-<p>After adding <code>\usepackage{subcaption}</code>, use like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -203,13 +215,44 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}</span>[b]<span class="nb">{</span>.48<span class="k">\textwidth</span><span class="nb">}</span>
-	<span class="k">\includegraphics</span><span class="nb">{</span>example.pdf<span class="nb">}</span>
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[ht]
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=.8\textwidth]</span>  <span class="nb">{</span>1.eps<span class="nb">}</span>
 	<span class="k">\caption</span><span class="nb">{}</span>
 	<span class="k">\label</span><span class="nb">{</span>fig:example<span class="nb">}</span>
-end<span class="nb">{</span>subfigure<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="position">Position</h3>
+<ul>
+<li><code>[h]</code> means <strong>h</strong>ere.</li>
+<li><code>[t]</code> means at the <strong>t</strong>op of the page.</li>
+<li><code>[p]</code> means on its own <strong>p</strong>age.</li>
+</ul>
+<p>I usually use <code>[ht]</code> for small/medium figures, and <code>[htp]</code> for large ones. Or <code>[H]</code> if you want it to stay just there.</p>
+<h3 id="sub-figures">Sub-figures</h3>
+<p>After adding <code>\usepackage{subfigure}</code>, use like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[H]
+    <span class="k">\centering</span>
+    <span class="k">\subfigure</span><span class="na">[pic 1-1]</span><span class="nb">{</span><span class="k">\includegraphics</span><span class="na">[width=.4\textwidth]</span><span class="nb">{</span>1-1.png<span class="nb">}}</span>
+    <span class="k">\subfigure</span><span class="na">[pic 1-2]</span><span class="nb">{</span><span class="k">\includegraphics</span><span class="na">[width=.4\textwidth]</span><span class="nb">{</span>1-2.png<span class="nb">}}</span><span class="k">\\</span>
+    <span class="k">\subfigure</span><span class="na">[pic 2]</span><span class="nb">{</span><span class="k">\includegraphics</span><span class="na">[width=.7\textwidth]</span><span class="nb">{</span>2.png<span class="nb">}}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Example for Panel 2-1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>For more custom organization of the sub-figures, feel free to use <code>minipage</code> environment. To force a caption number/letter, use <code>\addtocounter{subfigure}{XX}</code>. For example, to have the second subfigure as a long vertical panel on the right and figure {\it a} and {\it c}, smaller on the left:</p>
@@ -266,6 +309,36 @@ keywordstyle=<span class="k">\color</span><span class="nb">{</span>blue<span cla
 stringstyle=<span class="k">\color</span><span class="nb">{</span>mymauve<span class="nb">}</span><span class="k">\ttfamily</span>,
 rulesepcolor=<span class="k">\color</span><span class="nb">{</span>red!20!green!20!blue!20<span class="nb">}</span>,
 <span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Then try <code>\lstinputlisting[caption=Source codes]{code.m}</code> to insert source codes in LaTeX.</p>
+<h2 id="citing-and-referencing-with-bibtex">Citing and referencing with BibTeX</h2>
+<p>Use <a href="../zotero">Zotero</a> or other reference management tools, such as <a href="https://endnote.com/">EndNote</a> to generate <code>.bib</code> file automatically.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tex" data-lang="tex">Random citation <span class="k">\cite</span><span class="nb">{</span>DUMMY:1<span class="nb">}</span> embeddeed in text.
+
+<span class="k">\newpage</span>
+
+<span class="k">\bibliography</span><span class="nb">{</span>bibfilename<span class="nb">}</span> <span class="c">%(do NOT add .bib)
+</span><span class="c"></span><span class="k">\bibliographystyle</span><span class="nb">{</span>plain<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>To get display as reference<sup>[1]</sup>, we can add this in the preamble.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\upcite</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\cite</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
