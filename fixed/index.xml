@@ -23,8 +23,8 @@
       <guid>https://yjwang39.github.io/momento/shell/</guid>
       <description>This page focuses on configuration of the terminal, useful commands and scripting.
 Command-line tools I used (e.g. git) are described in the Tools page.
-External links  The Art of Command Line Terminals Are Sexy  SSH login I would like it simple when I have to log in remote servers using terminal shell:
- do not have to remember all the various remote addresses and usernames. enable X11 forwarding and SSH agent forwarding, which allows running graphical applications remotely do not have to enter various passwords for different servers.</description>
+External links  The Art of Command Line Terminals Are Sexy  Linux Command rename - renaming multiple files mv (short of move) command is used to rename or move files from one location to another.
+1 2 3 4 5  mv [OPTIONS] source destination # renaming multiple files - rename all .</description>
     </item>
     
     <item>

@@ -85,7 +85,66 @@ Command-line tools I used (e.g. git) are described in the <a href="../tools/">To
 <li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
 <li><a href="https://terminalsare.sexy/">Terminals Are Sexy</a></li>
 </ul>
-<h2 id="ssh-login">SSH login</h2>
+<h2 id="linux-command">Linux Command</h2>
+<h3 id="rename---renaming-multiple-files"><code>rename</code> - renaming multiple files</h3>
+<p><code>mv</code> (short of <em>move</em>) command is used to rename or move files from one location to another.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">mv <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="nb">source</span> destination
+<span class="c1"># renaming multiple files - rename all .html files extension to .php</span>
+<span class="k">for</span> f in *.html<span class="p">;</span> <span class="k">do</span>
+    mv -- <span class="s2">&#34;</span><span class="nv">$f</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">f</span><span class="p">%.html</span><span class="si">}</span><span class="s2">.php&#34;</span>
+<span class="k">done</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Use <code>rename</code> to make it one-line case!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">rename <span class="o">[</span>options<span class="o">]</span> <span class="s2">&#34;s/oldname/newname/&#34;</span> file
+</code></pre></td></tr></table>
+</div>
+</div><p>However, I have to remind you that <code>man rename</code> works far more efficient than this.</p>
+<h3 id="grep---grep-as-globally-search-for-re-and-print-it"><code>grep</code> - <code>g/RE/p</code> as globally search for RE and print it</h3>
+<p><code>grep</code> is an acronym that stands for <strong>G</strong>lobal <strong>R</strong>egular <strong>E</strong>xpression <strong>P</strong>rint. It is used to search for a string of characters in a specified file.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">grep string file1 file2
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>-i</code> - ignore case</li>
+<li><code>-w</code> - whole words only</li>
+<li><code>-v</code> - inverse search - <strong>do not</strong> match</li>
+<li><code>-x</code> - show lines</li>
+<li><code>-l</code> - list names of matching files</li>
+<li><code>-c</code> - count the number of matches</li>
+<li><code>-A/B/C 3</code> - display 3 lines before/after/before&amp;after the match</li>
+</ul>
+<p>Use this with <code>ls</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ls <span class="p">|</span> grep <span class="s2">&#34;^[a-f]&#34;</span>
+ls <span class="p">|</span> grep <span class="s2">&#34;[g-h]</span>$<span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="ssh-login">SSH login</h2>
 <p>I would like it simple when I have to log in remote servers using terminal shell:</p>
 <ul>
 <li><em>do not</em> have to remember all the various remote addresses and usernames.</li>
