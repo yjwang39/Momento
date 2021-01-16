@@ -78,7 +78,41 @@
 <div class="page">
   <h1 class="page-title">LaTeX</h1>
   <small><em class="page-description">Commonly used information in LaTeX.</em></small>
-  <h2 id="cheatsheets">Cheatsheets</h2>
+  <ul>
+<li><a href="#cheatsheets">Cheatsheets</a></li>
+<li><a href="#standard-packages">Standard packages</a></li>
+<li><a href="#misc">Misc</a>
+<ul>
+<li><a href="#document-class">Document class</a></li>
+<li><a href="#page-size">Page size</a></li>
+<li><a href="#font-sizes">Font sizes</a></li>
+<li><a href="#languages-and-encoding">Languages and encoding</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#table-of-contents">Table of contents</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#defining-your-own">Defining your own</a>
+<ul>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#environments">Environments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#figures">Figures</a>
+<ul>
+<li><a href="#position">Position</a></li>
+<li><a href="#sub-figures">Sub-figures</a></li>
+</ul>
+</li>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#side-by-side-tables">Side by Side Tables</a></li>
+</ul>
+</li>
+<li><a href="#code-blocks">Code blocks</a></li>
+<li><a href="#citing-and-referencing-with-bibtex">Citing and referencing with BibTeX</a></li>
+</ul>
+<h2 id="cheatsheets">Cheatsheets</h2>
 <ul>
 <li><a href="../pdf/Mathsymbols_TEX_Cookbook.pdf">List of symbols</a></li>
 </ul>
@@ -420,8 +454,8 @@ rulesepcolor=<span class="k">\color</span><span class="nb">{</span>red!20!green!
 <span class="k">\newpage</span>
 
 <span class="k">\bibliography</span><span class="nb">{</span>bibfilename<span class="nb">}</span> <span class="c">%(do NOT add .bib)
-</span><span class="c"></span><span class="k">\bibliographystyle</span><span class="nb">{</span>plain<span class="nb">}</span>
-</code></pre></td></tr></table>
+</span><span class="c"></span><span class="k">\bibliographystyle</span><span class="nb">{</span>ieeetr<span class="nb">}</span> <span class="c">%
+</span></code></pre></td></tr></table>
 </div>
 </div><p>To get display as reference<sup>[1]</sup>, we can add this in the preamble.</p>
 <div class="highlight"><div class="chroma">
@@ -429,7 +463,7 @@ rulesepcolor=<span class="k">\color</span><span class="nb">{</span>red!20!green!
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\upcite</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\cite</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
+<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\scite</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\textsuperscript</span><span class="nb">{</span><span class="k">\cite</span><span class="nb">{</span>#1<span class="nb">}}}</span>
 </code></pre></td></tr></table>
 </div>
 </div>

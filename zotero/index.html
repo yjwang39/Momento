@@ -82,6 +82,39 @@
 <p>Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.</p><br />
 — <cite>Zotero Website</cite></p>
 </blockquote>
+<h2 id="how-to-sync-pdfs-across-devices">How to sync PDFs across devices?</h2>
+<ol>
+<li>Choose a cloud service provider that allows you to sync files across devices.</li>
+<li>Change settings in Zotero to acticate relatice paths for linked attachments.<br />
+Go to <code>Preferences -&gt; Advanced -&gt; Files and Folders</code>,
+<ol>
+<li>Change <code>Data Directory Location</code> from &lsquo;Default&rsquo; to a custom <em>Directory</em> folder under your synced directory. For example, I create a <code>zotero</code> folder in <a href="https://www.jianguoyun.com/">Nutstore</a>, then I change to <code>/zotero/Directory</code>.</li>
+<li>Set <code>Linked Attachment Base Directory</code> to a folder in another <em>Attachment</em> folder under <strong>the</strong> synced directory, e.g. <code>/zotero/Attachment</code>. <br />
+*Note: &lsquo;You cannot select a Linked Attachment Base Directory <strong>within</strong> the Zotero data directory.&rsquo; *</li>
+</ol>
+</li>
+<li>Change settings in ZotFile.<br />
+Go to <code>Tools -&gt; ZotFile Preferences</code>,
+<ol>
+<li>Change <code>Source Folder for Attaching New Files</code> to <code>/zotero/Directory/storage</code>.</li>
+<li>Change <code>Location of Files</code> to <code>/zotero/Attachment</code>.</li>
+<li>(Optional but <strong>recommended</strong>) Activate subfolder defined by <code>/%T/%y/%j</code> (item type/year/journal)</li>
+</ol>
+</li>
+<li>Move your attachments to <em>Attachment</em> folder (also sorted).<br />
+<strong>Ctrl + A</strong> to select all the items and right-click, then choose <code>Manage Attachments -&gt; Rename Attachments</code>.</li>
+</ol>
+<h2 id="userful-add-ons">Userful Add-Ons</h2>
+<h3 id="better-bibtexhttpsretorquerezotero-better-bibtex"><a href="https://retorque.re/zotero-better-bibtex/">Better BibTex</a></h3>
+<p>I use this BBT to</p>
+<ol>
+<li>omit fields from exports to slim down your bib files,</li>
+<li>specify patterns citation keys are generated with,</li>
+<li>automatically update exports,</li>
+<li>&hellip;</li>
+</ol>
+<h3 id="zotfilehttpzotfilecom"><a href="http://zotfile.com/">ZotFile</a></h3>
+<p>I use this well-known ZotFile to manage paper PDFs as above.</p>
 
 </div>
 

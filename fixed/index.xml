@@ -11,8 +11,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yjwang39.github.io/momento/latex/</guid>
-      <description>Cheatsheets  List of symbols  Standard packages This is my default (more or less) :
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  \documentclass[a4paper,12pt]{report} \usepackage{amsmath,amsfonts,amssymb,bm} \usepackage{CTEX} \usepackage{graphicx} \usepackage{titlesec} \usepackage{fancyhdr} \usepackage{enumitem} \usepackage{hyperref} \usepackage{listings} \usepackage{fontspec} \usepackage{xcolor} \usepackage{soul} \usepackage{ulem} \usepackage{float} \usepackage{subfigure} \usepackage{cite}   Misc Document class 1  \documentclass[12pt, a4paper]{report}    Classic classes: article, report, book. Default font size is 10pt.</description>
+      <description>Cheatsheets Standard packages Misc  Document class Page size Font sizes Languages and encoding Links Table of contents Metadata Defining your own  Commands Environments     Figures  Position Sub-figures   Tables  Side by Side Tables   Code blocks Citing and referencing with BibTeX  Cheatsheets  List of symbols  Standard packages This is my default (more or less) :
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  \documentclass[a4paper,12pt]{report} \usepackage{amsmath,amsfonts,amssymb,bm} \usepackage{CTEX} \usepackage{graphicx} \usepackage{titlesec} \usepackage{fancyhdr} \usepackage{enumitem} \usepackage{hyperref} \usepackage{listings} \usepackage{fontspec} \usepackage{xcolor} \usepackage{soul} \usepackage{ulem} \usepackage{float} \usepackage{subfigure} \usepackage{cite}   Misc Document class 1  \documentclass[12pt, a4paper]{report}    Classic classes: article, report, book.</description>
     </item>
     
     <item>
@@ -23,8 +23,7 @@
       <guid>https://yjwang39.github.io/momento/shell/</guid>
       <description>This page focuses on configuration of the terminal, useful commands and scripting.
 Command-line tools I used (e.g. git) are described in the Tools page.
-External links  The Art of Command Line Terminals Are Sexy  Linux Command rename - renaming multiple files mv (short of move) command is used to rename or move files from one location to another.
-1 2 3 4 5  mv [OPTIONS] source destination # renaming multiple files - rename all .</description>
+ External links Linux Command  rename - renaming multiple files grep - g/RE/p as globally search for RE and print it   SSH login  Configuring Passwordless Authentication    External links  The Art of Command Line Terminals Are Sexy  Linux Command rename - renaming multiple files mv (short of move) command is used to rename or move files from one location to another.</description>
     </item>
     
     <item>
