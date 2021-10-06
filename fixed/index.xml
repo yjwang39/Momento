@@ -23,7 +23,7 @@
       <guid>https://yjwang39.github.io/momento/shell/</guid>
       <description>This page focuses on configuration of the terminal, useful commands and scripting.
 Command-line tools I used (e.g. git) are described in the Tools page.
- External links Linux Command  rename - renaming multiple files grep - g/RE/p as globally search for RE and print it   SSH login  Configuring Passwordless Authentication    External links  The Art of Command Line Terminals Are Sexy  Linux Command rename - renaming multiple files mv (short of move) command is used to rename or move files from one location to another.</description>
+ External links Regular Expression Linux Command  rename - renaming multiple files grep - g/RE/p as globally search for RE and print it   SSH login  Configuring Passwordless Authentication    External links  The Art of Command Line Terminals Are Sexy  Regular Expression  grey|gray is an equivalent pattern of gr(a|e)y Quantification  ?</description>
     </item>
     
     <item>

@@ -82,6 +82,7 @@
 Command-line tools I used (e.g. git) are described in the <a href="../tools/">Tools page</a>.</p>
 <ul>
 <li><a href="#external-links">External links</a></li>
+<li><a href="#regular-expression">Regular Expression</a></li>
 <li><a href="#linux-command">Linux Command</a>
 <ul>
 <li><a href="#rename---renaming-multiple-files"><code>rename</code> - renaming multiple files</a></li>
@@ -98,6 +99,23 @@ Command-line tools I used (e.g. git) are described in the <a href="../tools/">To
 <ul>
 <li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
 <li><a href="https://terminalsare.sexy/">Terminals Are Sexy</a></li>
+</ul>
+<h2 id="regular-expression">Regular Expression</h2>
+<ul>
+<li><code>grey|gray</code> is an equivalent pattern of <code>gr(a|e)y</code></li>
+<li>Quantification
+<ol>
+<li><code>?</code> - zero/one occurrences</li>
+<li><code>*</code> - zero/more occurrences</li>
+<li><code>+</code> - one/more occurrences</li>
+<li><code>{n}</code> - exactly <em>n</em> times</li>
+</ol>
+</li>
+<li><code>^[a-z0-9_-]{3,15}$</code> - 3 to 15 characters containing lowercase letters, numbers or &ldquo;_&rdquo; &ldquo;-&rdquo;.</li>
+<li><code>[^a-z]</code> - any single character that is not lowercase letter.</li>
+<li><code>\s</code> - whitespace characters</li>
+<li><code>\S</code> - the opposite of <code>\s</code> = <code>[^ \t\n\r\f\v]</code></li>
+<li><code>\w</code> = <code>[a-zA-Z0-9_]</code></li>
 </ul>
 <h2 id="linux-command">Linux Command</h2>
 <h3 id="rename---renaming-multiple-files"><code>rename</code> - renaming multiple files</h3>
