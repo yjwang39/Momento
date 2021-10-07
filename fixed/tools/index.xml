@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Momento</title>
-    <link>https://yjwang39.github.io/momento/fixed/tools/</link>
+    <link>https://yjwang39.github.io/Momento/fixed/tools/</link>
     <description>Recent content in Tools on Momento</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://yjwang39.github.io/momento/fixed/tools/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://yjwang39.github.io/Momento/fixed/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>https://yjwang39.github.io/momento/git/</link>
+      <link>https://yjwang39.github.io/Momento/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yjwang39.github.io/momento/git/</guid>
+      <guid>https://yjwang39.github.io/Momento/git/</guid>
       <description>Git can be useful when you build a version-control system to track changes in source code.
  Commit all modification and added files: git commit -am &amp;quot;informative message&amp;quot; To show all the history of a file: git log -p -- file To retrieve a specific version of a file: git show COMMIT:file Revert repo to a specific commit: git checkout COMMIT Undo a commit: git reset HEAD~ and then for the real commit git commit -c ORIG_HEAD.</description>
     </item>
     
     <item>
       <title>Zotero</title>
-      <link>https://yjwang39.github.io/momento/zotero/</link>
+      <link>https://yjwang39.github.io/Momento/zotero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yjwang39.github.io/momento/zotero/</guid>
+      <guid>https://yjwang39.github.io/Momento/zotero/</guid>
       <description>Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
 — Zotero Website
  How to sync PDFs across devices?  Choose a cloud service provider that allows you to sync files across devices. Change settings in Zotero to acticate relatice paths for linked attachments.
@@ -29,10 +29,10 @@ Go to Preferences -&amp;gt; Advanced -&amp;gt; Files and Folders,  Change Data D
     
     <item>
       <title>Miscs</title>
-      <link>https://yjwang39.github.io/momento/miscs/</link>
+      <link>https://yjwang39.github.io/Momento/miscs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yjwang39.github.io/momento/miscs/</guid>
+      <guid>https://yjwang39.github.io/Momento/miscs/</guid>
       <description>Misc internet tools  https://www.diagrams.net/ to make cartoon and diagrams (used to be draw.io)  </description>
     </item>
     
