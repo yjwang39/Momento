@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>MacOS tools</title>
+      <link>https://yjwang39.github.io/Momento/macos-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/Momento/macos-tools/</guid>
+      <description>HomeBrew - package manager 1  brew cleanup --prune 0   Remove all cache files older than specified 0 days. If you want to remove everything, use --prune=all.</description>
+    </item>
+    
+    <item>
       <title>Zotero</title>
       <link>https://yjwang39.github.io/Momento/zotero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -23,8 +32,7 @@
       <guid>https://yjwang39.github.io/Momento/zotero/</guid>
       <description>Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
 — Zotero Website
- How to sync PDFs across devices?  Choose a cloud service provider that allows you to sync files across devices. Change settings in Zotero to acticate relatice paths for linked attachments.
-Go to Preferences -&amp;gt; Advanced -&amp;gt; Files and Folders,  Change Data Directory Location from &amp;lsquo;Default&amp;rsquo; to a custom Directory folder under your synced directory.</description>
+ How to Find PDFs efficiently?  Go to Preferences -&amp;gt; Advanced -&amp;gt; General -&amp;gt; Advance Configuration, select Config Editor. Search for extensions.zotero.findPDFs.resolvers and double click the item to change into the following.  1 2 3 4 5 6 7 8 9  {&amp;#34;name&amp;#34;:&amp;#34;Sci-Hub&amp;#34;,&amp;#34;method&amp;#34;:&amp;#34;GET&amp;#34;,&amp;#34;url&amp;#34;:&amp;#34;https://sci-hub.se/{doi}&amp;#34;,&amp;#34;mode&amp;#34;:&amp;#34;html&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;#pdf&amp;#34;,&amp;#34;attribute&amp;#34;:&amp;#34;src&amp;#34;,&amp;#34;automatic&amp;#34;:true}  How to sync PDFs across devices?</description>
     </item>
     
     <item>
@@ -33,7 +41,10 @@ Go to Preferences -&amp;gt; Advanced -&amp;gt; Files and Folders,  Change Data D
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yjwang39.github.io/Momento/miscs/</guid>
-      <description>Misc internet tools  https://www.diagrams.net/ to make cartoon and diagrams (used to be draw.io)  </description>
+      <description>Misc internet tools   https://www.diagrams.net/ to make cartoon and diagrams (used to be draw.io)
+  https://linggle.com/ to look up English language reference
+  https://netspeak.org/ to search for words you don&amp;rsquo;t know.
+   </description>
     </item>
     
   </channel>

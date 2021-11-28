@@ -27,6 +27,16 @@ Command-line tools I used (e.g. git) are described in the Tools page.
     </item>
     
     <item>
+      <title>Models</title>
+      <link>https://yjwang39.github.io/Momento/models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yjwang39.github.io/Momento/models/</guid>
+      <description>CESM Ready to run - basic workflow 1 2  ./create_newcase --case ~/CESM_yjw/mycase/XX --res f09_f09_mg17 --compset FCHIST --mach coaerm #./create_newcase --case ~/CESM_yjw/mycase/YY --compset G --res T62_g37 --mach EBMGMM --compiler intel   Grids f09_f09_mg17 corresponds to the long name: a%0.9x1.25_l%0.9x1.25_oi%0.9x1.25_m%gx1v7_r%null_g%null_w%null. f09_g17 refers to FV (Finite Volume) 1-deg coupled to gx1v7 ocean.
+Here in gx1, &amp;ldquo;g&amp;rdquo; means bipolar grid/greenland displaced pole grid used for ocn-ice mask with 1-deg resolution (to remove singularity from the North Pole).</description>
+    </item>
+    
+    <item>
       <title>Markdown</title>
       <link>https://yjwang39.github.io/Momento/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

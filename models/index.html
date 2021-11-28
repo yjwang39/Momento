@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Models &middot; Momento
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="../css/poole.css">
+  <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="./fa/css/font-awesome.min.css">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../favicon/android-icon-144x144.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+</head>
+
+
+  <body class="theme-base-0d">
+
+  
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A place to gather useful information I keep on forgetting.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="../">Home</a>
+    <a class="sidebar-nav-item " href="../post">Posts</a>
+    <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/fixed/python/">Python</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/latex/">LaTeX</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/shell/">Shell</a>
+      <a class="sidebar-nav-item  active " href="https://yjwang39.github.io/Momento/models/">Models</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/markdown/">Markdown</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/fixed/tools/">Tools</a>
+      <a class="sidebar-nav-item " href="https://yjwang39.github.io/Momento/about/">About</a>
+      
+    <a class="sidebar-nav-item" href="https://github.com/yjwang39/Momento">GitHub project</a>
+    </nav>
+
+  <div class="sidebar-item">
+  </div>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020 Yujuan Wang. All rights reserved.</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../" title="Home">Momento</a>
+            <small>some quick reference</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="page">
+  <h1 class="page-title">Models</h1>
+  <small><em class="page-description">Common commands ...</em></small>
+  <h2 id="cesm">CESM</h2>
+<h3 id="ready-to-run---basic-workflow">Ready to run - basic workflow</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./create_newcase --case ~/CESM_yjw/mycase/XX --res f09_f09_mg17 --compset FCHIST --mach coaerm
+<span class="c1">#./create_newcase --case ~/CESM_yjw/mycase/YY --compset G --res T62_g37 --mach EBMGMM --compiler intel</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="gridshttpswwwcesmucaredumodelscesm2configgridshtml"><a href="https://www.cesm.ucar.edu/models/cesm2/config/grids.html">Grids</a></h4>
+<p><code>f09_f09_mg17</code> corresponds to the long name: a%0.9x1.25_l%0.9x1.25_oi%0.9x1.25_m%gx1v7_r%null_g%null_w%null. <code>f09_g17</code> refers to FV (Finite Volume) 1-deg coupled to gx1v7 ocean.</p>
+<p>Here in <code>gx1</code>, &ldquo;g&rdquo; means <strong>bipolar grid/greenland displaced pole grid</strong> used for ocn-ice mask with 1-deg resolution (to remove singularity from the North Pole). Another scheme is <strong>Tripole grid</strong> (<code>tx0.1</code>).</p>
+<h4 id="compsetshttpswwwcesmucaredumodelscesm2configcompsetshtml"><a href="https://www.cesm.ucar.edu/models/cesm2/config/compsets.html">Compsets</a></h4>
+<p><code>FC2010climo</code> corresponds to the long name: 2010_CAM60%CCTS1_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV in which atm component includes &ldquo;CAM cam6 physics:CAM-Chem troposphere/stratosphere chemistry with simplified VBS-SOA&rdquo;. This uses climatological forcing representative of the year 2010 (climatology over the year 2005-2015 or 2006-2014).</p>
+<ul>
+<li><code>FCHIST</code>: Historical forcing, CMIP6 emissions, coupled to interactive land and MEGAN2.1</li>
+<li><code>FCnudged</code>: nudged to U,V,T from MERRA2 analsysis with a 50-hours interpolated to CESM (32) model levels</li>
+<li><code>FCts2nudged</code>: as FCnudged, but using TS2 chemistry (expanded isoprene and terpene oxidation)</li>
+<li><code>FCSD</code>: Historical forcing, using MERRA2 analsysis with a 50-hour relaxation, using MERRA vertical levels</li>
+</ul>
+<p>Some component options:</p>
+<ul>
+<li>Year (1850, 2000, transient, etc.)</li>
+<li>Data Ocean (DOM-prescribed ocean mode, SOM-slab ocean mode, etc.)</li>
+<li>Data atmosphere (GSWP3, CRUNCEP, CPLHIST3HrWx)</li>
+<li>Atm model descriptions (TS1-CAMchem troposphere and stratosphere)</li>
+<li>Land model options (SP-satellite phenology, BGC-biogeochemistry)</li>
+<li>RCP scenarios</li>
+</ul>
+<p>If taken fire emissions into consideration, <code>FCfireHist</code> uses &ldquo;CLM50%BGC-CROP&rdquo; <code>FHIST_BGC</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> ~/CESM_yjw/mycase/XX
+./case.setup
+./preview_run
+<span class="c1"># edit env_mach_pes.xml</span>
+vi host
+cnode11 <span class="m">80</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./preview_namelists
+./case.build
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./check_input_data --download <span class="c1">#optional but USEFUL</span>
+nohup ./check_input_data --download &gt; chkinputdata.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+
+./check_case <span class="c1">#optional but USEFUL</span>
+./preview_run
+./case.submit
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="after-running">After running</h3>
+<p>To print readable date-time strings:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ncdump –t –v <span class="nb">time</span> slp.mon.mean.nc
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+
