@@ -173,10 +173,12 @@ grep <span class="s2">&#34;text&#34;</span> . -r -n
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh">ls <span class="p">|</span> grep <span class="s2">&#34;^[a-f]&#34;</span>
 ls <span class="p">|</span> grep <span class="s2">&#34;[g-h]</span>$<span class="s2">&#34;</span>
+ls <span class="p">|</span> grep -v <span class="m">2015</span> <span class="c1"># to find filenames excluding &#34;2015&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="ssh-login">SSH login</h2>

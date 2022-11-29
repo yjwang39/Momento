@@ -79,8 +79,23 @@
 <div class="page">
   <h1 class="page-title">Models</h1>
   <small><em class="page-description">Common commands ...</em></small>
-  <h2 id="cesm">CESM</h2>
-<h3 id="ready-to-run---basic-workflow">Ready to run - basic workflow</h3>
+  <ul>
+<li><a href="#cesm">CESM</a>
+<ul>
+<li><a href="#ready-to-run---basic-workflow">Ready to run - basic workflow</a><br />
+- <a href="#grids">Grids</a><br />
+- <a href="#compsets">Compsets</a></li>
+<li><a href="#after-running">After running</a></li>
+<li><a href="#utilities">Utilities</a>
+<ul>
+<li><a href="#interpic---to-interpolates-existing-ic-files-to-new-grids-given-a-template"><code>interpic</code> - to interpolates existing IC files to new grids, given a template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="cesm">CESM</h1>
+<h2 id="ready-to-run---basic-workflow">Ready to run - basic workflow</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -120,14 +135,16 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> ~/CESM_yjw/mycase/XX
 ./case.setup
 ./preview_run
 <span class="c1"># edit env_mach_pes.xml</span>
-vi host
-cnode11 <span class="m">80</span>
+cat &gt;&gt;host1<span class="s">&lt;&lt;EOF
+</span><span class="s">cnode1 28
+</span><span class="s">EOF</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
@@ -160,7 +177,7 @@ nohup ./check_input_data --download &gt; chkinputdata.log 2&gt;<span class="p">&
 
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="after-running">After running</h3>
+</div><h2 id="after-running">After running</h2>
 <p>To print readable date-time strings:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -170,7 +187,31 @@ nohup ./check_input_data --download &gt; chkinputdata.log 2&gt;<span class="p">&
 <pre class="chroma"><code class="language-sh" data-lang="sh">ncdump –t –v <span class="nb">time</span> slp.mon.mean.nc
 </code></pre></td></tr></table>
 </div>
+</div><h2 id="utilities">Utilities</h2>
+<h3 id="interpic---to-interpolates-existing-ic-files-to-new-grids-given-a-template"><code>interpic</code> - to interpolates existing IC files to new grids, given a template</h3>
+<p>You can find the source code here: <code>$CESMDIR/components/cam/tools</code></p>
+<p>Since I failed the first attempt to <code>make</code> and error about &ldquo;ifort&rdquo; came up, I googled about this. <a href="https://forum.cmascenter.org/t/smoke-compilation/1197/2">This discussion</a> mentioned the incorrect use of the netCDF-Fortran flag.</p>
+<p>So the solution to my situation is to change <code>Makefile:99L</code> to</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">LDFLAGS</span> <span class="o">=</span> -L<span class="k">$(</span>LIB_NETCDF<span class="k">)</span> -lnetcdff -lnetcdf
+</code></pre></td></tr></table>
 </div>
+</div><p>that is, use <code>-lnetcdff -lnetcdf</code> instead of just <code>-lnetcdf</code>.</p>
+<p>Then type</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">make <span class="nv">INC_NETCDF</span><span class="o">=</span><span class="nv">$NETCDF4</span>/include <span class="nv">LIB_NETCDF</span><span class="o">=</span><span class="nv">$NETCDF4</span>/lib
+</code></pre></td></tr></table>
+</div>
+</div><p>to create an executable named &ldquo;<strong>interpic</strong>&rdquo;.</p>
+
 </div>
 
       </div>
