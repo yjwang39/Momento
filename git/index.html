@@ -132,7 +132,7 @@ git config --global user.name <span class="s1">&#39;Yujuan Wang&#39;</span>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh">hugo server
 <span class="c1">#used for live reloading the pages</span>
-sh deploy.sh <span class="s2">&#34;Update xxx&#34;</span>
+sh deploy.sh <span class="s2">&#34;Update xxx `date`&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>And here is <code>deploy.sh</code>:</p>
@@ -190,6 +190,33 @@ git push origin master
 
 <span class="c1"># Come Back</span>
 <span class="nb">cd</span> ..
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="faq">FAQ</h3>
+<ol>
+<li>Connect issues &ldquo;error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054&rdquo;</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git config --global http.sslVerify <span class="s2">&#34;false&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Connect issues &ldquo;Failed to connect to github.com port 443: Operation timed out&rdquo;</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git config --global https.proxy http://127.0.0.1:7890
+git config --global http.proxy http://127.0.0.1:7890
+<span class="c1">#Be sure to substitute to your proxy port (e.g. 1080)</span>
 </code></pre></td></tr></table>
 </div>
 </div>
