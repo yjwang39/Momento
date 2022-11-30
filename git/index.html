@@ -88,7 +88,7 @@
 <li>Undo a commit: <code>git reset HEAD~</code> and then for the real commit <code>git commit -c ORIG_HEAD</code>.</li>
 <li>Update sub-modules: <code>git submodule update --init --recursive</code></li>
 <li>Add all untracked files: <code>git st -s | grep '??' | cut -f2 -d ' ' | xargs git add</code></li>
-<li>Add remote e.g. after a fork: <code>git remote add mine git@github.com:jmonlong/REPO.git</code></li>
+<li>Add remote e.g. after a fork: <code>git remote add mine git@github.com:USERNAME/REPO.git</code></li>
 </ul>
 <h3 id="aliases">Aliases</h3>
 <div class="highlight"><div class="chroma">
@@ -110,13 +110,13 @@ git config --global user.name <span class="s1">&#39;Yujuan Wang&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Also you can directly edit file <code>~/.gitconfig</code></p>
-<h4 id="branches">Branches</h4>
+<h3 id="branches">Branches</h3>
 <ul>
 <li>List branches: <code>git branch</code></li>
 <li>List all branches: <code>git branch -a</code></li>
 <li>Update remote branch list: <code>git remote prune origin</code></li>
 <li>Create branch: <code>git checkout -b hotfix</code></li>
-<li>Link it to a remote branch: <code>git branch -u origin/hotflix</code></li>
+<li>Link it to a remote branch: <code>git branch -u origin/hotfix</code></li>
 <li>Creat a new local branch from remote: <code>git co -t origin/hotfix</code></li>
 <li>Merge the current branch with another branch: <code>git merge hotfix</code></li>
 <li>Delete a branch: <code>git branch -d hotfix</code></li>
