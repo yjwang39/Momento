@@ -87,29 +87,22 @@
 <li>Revert repo to a specific commit: <code>git checkout COMMIT</code></li>
 <li>Undo a commit: <code>git reset HEAD~</code> and then for the real commit <code>git commit -c ORIG_HEAD</code>.</li>
 <li>Update sub-modules: <code>git submodule update --init --recursive</code></li>
-<li>Add all untracked files: <code>git st -s | grep '??' | cut -f2 -d ' ' | xargs git add</code></li>
+<li>Add all untracked files: <code>git status -s | grep '??' | cut -f2 -d ' ' | xargs git add</code></li>
 <li>Add remote e.g. after a fork: <code>git remote add mine git@github.com:USERNAME/REPO.git</code></li>
 </ul>
-<h3 id="aliases">Aliases</h3>
+<h3 id="configuration">Configuration</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">git config --global alias.co checkout
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.br branch
-git config --global user.email <span class="s1">&#39;&lt;EMAIL&gt;&#39;</span>
+<pre class="chroma"><code class="language-sh" data-lang="sh">git config --global user.email <span class="s1">&#39;&lt;EMAIL&gt;&#39;</span>
 git config --global user.name <span class="s1">&#39;Yujuan Wang&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Also you can directly edit file <code>~/.gitconfig</code></p>
+</div><p>Also you can directly edit file <code>~/.gitconfig</code> which is specific to user.</p>
+<p><code>.git/config</code> is specific to the single repository and represent the  <code>--local</code> option to <code>git config</code>.</p>
 <h3 id="branches">Branches</h3>
 <ul>
 <li>List branches: <code>git branch</code></li>
@@ -117,7 +110,7 @@ git config --global user.name <span class="s1">&#39;Yujuan Wang&#39;</span>
 <li>Update remote branch list: <code>git remote prune origin</code></li>
 <li>Create branch: <code>git checkout -b hotfix</code></li>
 <li>Link it to a remote branch: <code>git branch -u origin/hotfix</code></li>
-<li>Creat a new local branch from remote: <code>git co -t origin/hotfix</code></li>
+<li>Creat a new local branch from remote: <code>git checkout -t origin/hotfix</code></li>
 <li>Merge the current branch with another branch: <code>git merge hotfix</code></li>
 <li>Delete a branch: <code>git branch -d hotfix</code></li>
 <li>Delete remote branch: <code>git push origin :hotfix</code></li>
@@ -167,7 +160,7 @@ sh deploy.sh <span class="s2">&#34;Update xxx `date`&#34;</span>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
-<span class="nb">echo</span> -e <span class="s2">&#34;\033[1;37;42mDeploying updates to GitHub...\033[0m&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;\033[1;37;41mDeploying updates to GitHub...\033[0m&#34;</span>
 
 <span class="c1"># Build the project.</span>
 hugo <span class="c1"># if using a theme, replace by `hugo -t &lt;yourtheme&gt;`</span>

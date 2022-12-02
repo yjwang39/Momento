@@ -88,13 +88,20 @@
 <li><a href="#after-running">After running</a></li>
 <li><a href="#utilities">Utilities</a>
 <ul>
-<li><a href="#interpic---to-interpolates-existing-ic-files-to-new-grids-given-a-template"><code>interpic</code> - to interpolates existing IC files to new grids, given a template</a></li>
+<li><a href="#interpic---to-interpolates-existing-ic-files-to-new-grids-given-a-template"><code>interpic</code> - to interpolates existing IC files to new grids, given a template</a>
+<ul>
+<li><a href="#debug-first">Debug first.</a></li>
+<li><a href="#if-you-are-dealing-with-cam-fv">If you are dealing with CAM-FV</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h1 id="cesm">CESM</h1>
+<p>I used <a href="http://www.doxygen.nl/"><code>Doxygen</code></a> + <a href="http://www.graphviz.org/"><code>Graphviz</code></a> to analyze CESM codes (mainly <code>.F90</code>) and generate documentations with call graphs. The guide I refer to is <a href="https://blog.csdn.net/benkaoya/article/details/79763668">here</a> in Chinese.</p>
+<p>The configuration file I used can be accessed <a href="../../static/files/Doxyfile">here</a>.</p>
 <h2 id="ready-to-run---basic-workflow">Ready to run - basic workflow</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -190,6 +197,7 @@ nohup ./check_input_data --download &gt; chkinputdata.log 2&gt;<span class="p">&
 </div><h2 id="utilities">Utilities</h2>
 <h3 id="interpic---to-interpolates-existing-ic-files-to-new-grids-given-a-template"><code>interpic</code> - to interpolates existing IC files to new grids, given a template</h3>
 <p>You can find the source code here: <code>$CESMDIR/components/cam/tools</code></p>
+<h4 id="debug-first">Debug first.</h4>
 <p>Since I failed the first attempt to <code>make</code> and error about &ldquo;ifort&rdquo; came up, I googled about this. <a href="https://forum.cmascenter.org/t/smoke-compilation/1197/2">This discussion</a> mentioned the incorrect use of the netCDF-Fortran flag.</p>
 <p>So the solution to my situation is to change <code>Makefile:99L</code> to</p>
 <div class="highlight"><div class="chroma">
@@ -211,7 +219,41 @@ nohup ./check_input_data --download &gt; chkinputdata.log 2&gt;<span class="p">&
 </code></pre></td></tr></table>
 </div>
 </div><p>to create an executable named &ldquo;<strong>interpic</strong>&rdquo;.</p>
-
+<h4 id="if-you-are-dealing-with-cam-fv">If you are dealing with CAM-FV</h4>
+<ol>
+<li>Rename the variables of the original IC files.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ncrename -v US,U -v VS,V <span class="nv">$INICFILE</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Use the <code>interpic</code> tool to regrid.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">./interpic -s -t <span class="nv">$template</span> <span class="nv">$INICFILE</span> <span class="nv">$NEW_INICFILE</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Rename the variables of the regridded IC files.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">ncrename -v U,US -v V,VS <span class="nv">$NEW_INICFILE</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 </div>
 
       </div>
