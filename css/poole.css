@@ -148,14 +148,21 @@ abbr[title] {
 }
 
 /* Code */
+@font-face {
+  font-family:'Consolas';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Consolas'),
+       url('/fonts/YaHei Consolas Hybrid.ttf') format('tff'),
+}
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", Consolas;
+  font-family: 'Consolas', monospace;
 }
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #bf616a;
+  color: #784212;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
