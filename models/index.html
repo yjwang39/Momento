@@ -82,6 +82,11 @@
   <ul>
 <li><a href="#cesm">CESM</a>
 <ul>
+<li><a href="#before-running">Before running</a>
+<ul>
+<li><a href="#input-data---emissions">Input data - emissions</a></li>
+</ul>
+</li>
 <li><a href="#ready-to-run---basic-workflow">Ready to run - basic workflow</a><br />
 - <a href="#grids">Grids</a><br />
 - <a href="#compsets">Compsets</a></li>
@@ -102,6 +107,10 @@
 <h1 id="cesm">CESM</h1>
 <p>I used <a href="http://www.doxygen.nl/"><code>Doxygen</code></a> + <a href="http://www.graphviz.org/"><code>Graphviz</code></a> to analyze CESM codes (mainly <code>.F90</code>) and generate documentations with call graphs. The guide I refer to is <a href="https://blog.csdn.net/benkaoya/article/details/79763668">here</a> in Chinese.</p>
 <p>The configuration file I used can be accessed <a href="../../static/files/Doxyfile">here</a>.</p>
+<h2 id="before-running">Before running</h2>
+<h3 id="input-data---emissions">Input data - emissions</h3>
+<p>Since CESM includes CMIP6 emissions for time period 1750-2015, if you are running a more recent time, say 2021, like I am, you might bump into this <code>error</code>: <code>open_trc_datafile: cycle year not found 2015</code>.</p>
+<p>So far the solution is to manually extend the emission file to the year you set (in this case, 2015).</p>
 <h2 id="ready-to-run---basic-workflow">Ready to run - basic workflow</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -149,7 +158,7 @@
 ./case.setup
 ./preview_run
 <span class="c1"># edit env_mach_pes.xml</span>
-cat &gt;&gt;host1<span class="s">&lt;&lt;EOF
+cat &gt;&gt;host<span class="s">&lt;&lt;EOF
 </span><span class="s">cnode1 28
 </span><span class="s">EOF</span>
 </code></pre></td></tr></table>

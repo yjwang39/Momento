@@ -32,9 +32,9 @@ Command-line tools I used (e.g. git) are described in the Tools page.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yjwang39.github.io/Momento/models/</guid>
-      <description>CESM  Ready to run - basic workflow
+      <description>CESM  Before running  Input data - emissions   Ready to run - basic workflow
 - Grids
-- Compsets After running Utilities  interpic - to interpolates existing IC files to new grids, given a template  Debug first. If you are dealing with CAM-FV        CESM I used Doxygen + Graphviz to analyze CESM codes (mainly .F90) and generate documentations with call graphs. The guide I refer to is here in Chinese.</description>
+- Compsets After running Utilities  interpic - to interpolates existing IC files to new grids, given a template  Debug first. If you are dealing with CAM-FV        CESM I used Doxygen + Graphviz to analyze CESM codes (mainly .F90) and generate documentations with call graphs.</description>
     </item>
     
     <item>
